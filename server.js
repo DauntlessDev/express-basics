@@ -3,7 +3,9 @@ const app = express()
 
 app.get('/', (req, res) => {
     console.log('Here') 
-    res.send("Hi")
+    // res.status(500).send({message:"Hi"})
+    res.download('server.js')
+
 })
 
 app.listen(3000)
